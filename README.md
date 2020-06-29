@@ -10,6 +10,7 @@ File: *intervals.py*. Includes realizations of confidence and statistical interv
 - `zconfint_diff` - confidence interval based on normal distribution for the difference in means of two samples;
 - `tconfint` - confidence interval based on Student t distribution;
 - `tconfint_diff` - confidence interval based on Student t distribution for the difference in means of two samples;
+- `var_confint` - confidence interval for sample variance;
 - `bootstrap_statint` - statistical interval for a `stat` of a `sample` calculation using bootstrap sampling mechanism;
 - `bootstrap_statint_diff` - statistical interval for a difference in `stat` of two samples calculation using bootstrap sampling mechanism;
 - `proportion_confint` - Wilson's сonfidence interval for a proportion;

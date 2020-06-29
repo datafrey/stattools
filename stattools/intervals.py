@@ -3,7 +3,7 @@ from scipy import stats
 
 
 def zconfint(sample, sigma=None, alpha=0.05):
-    '''Confidence interval based on normal distribution.'''
+    '''Confidence interval based on normal distribution for sample mean.'''
     mean = np.mean(sample)
     n = len(sample)
 
@@ -39,7 +39,7 @@ def zconfint_diff(sample1, sample2, sigma1=None, sigma2=None, alpha=0.05):
 
 
 def tconfint(sample, alpha=0.05):
-    '''Confidence interval based on Student t distribution.'''
+    '''Confidence interval based on Student t distribution for sample mean.'''
     mean = np.mean(sample)
     S = np.std(sample, ddof=1)
     n = len(sample)
@@ -71,6 +71,19 @@ def tconfint_diff(sample1, sample2, alpha=0.05):
     t = stats.t.ppf(1 - alpha / 2, dof)
     left_boundary = (mean1 - mean2) - t * np.sqrt((s1 ** 2) / n1 + (s2 ** 2) / n2)
     right_boundary = (mean1 - mean2) + t * np.sqrt((s1 ** 2) / n1 + (s2 ** 2) / n2)
+
+    return left_boundary, right_boundary
+
+
+def var_confint(sample, alpha=0.05):
+    '''Confidence interval for sample variance.'''
+    var = np.var(sample, ddof=1)
+    n = len(sample)
+
+    chi2_l = stats.chi2.ppf(1 - alpha / 2, n - 1)
+    chi2_r = stats.chi2.ppf(alpha / 2, n - 1)
+    left_boundary = ((n - 1) * var) / chi2_l
+    right_boundary = ((n - 1) * var) / chi2_r
 
     return left_boundary, right_boundary
 
