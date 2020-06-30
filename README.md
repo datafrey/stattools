@@ -6,9 +6,9 @@ Sets of `scipy`, `statsmodels` and self-made tools for statistical analysis. Imp
 
 File: *intervals.py*. Includes realizations of confidence and statistical intervals:
 
-- `zconfint` - confidence interval based on normal distribution;
+- `zconfint` - confidence interval based on normal distribution for sample mean;
 - `zconfint_diff` - confidence interval based on normal distribution for the difference in means of two samples;
-- `tconfint` - confidence interval based on Student t distribution;
+- `tconfint` - confidence interval based on Student t distribution for sample mean;
 - `tconfint_diff` - confidence interval based on Student t distribution for the difference in means of two samples;
 - `var_confint` - confidence interval for sample variance;
 - `bootstrap_statint` - statistical interval for a `stat` of a `sample` calculation using bootstrap sampling mechanism;
