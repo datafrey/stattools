@@ -8,7 +8,7 @@ def zconfint(sample, sigma=None, alpha=0.05):
     n = len(sample)
 
     if not sigma:
-        sigma = np.std(sample)
+        sigma = np.std(sample, ddof=1)
 
     z = stats.norm.ppf(1 - alpha / 2)
     left_boundary = mean - z * sigma / np.sqrt(n)
@@ -26,10 +26,10 @@ def zconfint_diff(sample1, sample2, sigma1=None, sigma2=None, alpha=0.05):
     n2 = len(sample2)
 
     if not sigma1:
-        sigma1 = np.std(sample1)
+        sigma1 = np.std(sample1, ddof=1)
 
     if not sigma2:
-        sigma2 = np.std(sample2)
+        sigma2 = np.std(sample2, ddof=1)
 
     z = stats.norm.ppf(1 - alpha / 2)
     left_boundary = (mean1 - mean2) - z * np.sqrt((sigma1 ** 2) / n1 + (sigma2 ** 2) / n2)
