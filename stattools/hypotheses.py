@@ -2,7 +2,7 @@ import numpy as np
 from scipy import stats
 import itertools
 
-from scipy.stats import chisquare, shapiro, ttest_1samp, ttest_ind, ttest_rel
+from scipy.stats import chisquare, shapiro, kstest, ttest_1samp, ttest_ind, ttest_rel
 from statsmodels.stats.descriptivestats import sign_test
 from scipy.stats import median_test, wilcoxon, mannwhitneyu
 from statsmodels.sandbox.stats.multicomp import multipletests

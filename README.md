@@ -29,7 +29,7 @@ File: *hypotheses.py*. Includes realizations of statistical tests:
 
 Some of `scipy` and `statsmodels` methods can also be accessed.
 
-**List of Scipy methods**: `chisquare`, `shapiro`, `ttest_1samp`, `ttest_ind`, `ttest_rel`, `median_test`, `wilcoxon`, `mannwhitneyu`.
+**List of Scipy methods**: `chisquare`, `shapiro`, `kstest`, `ttest_1samp`, `ttest_ind`, `ttest_rel`, `median_test`, `wilcoxon`, `mannwhitneyu`.
 
 **List of Statsmodels methods**: `sign_test`, `multipletests`.
 
